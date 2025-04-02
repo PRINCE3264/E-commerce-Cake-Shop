@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Shop</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styless.css">
+  <script src="https://unpkg.com/lottie-web@5.9.6/build/player/lottie.min.js"></script>
+
+</head>
+<body  >
+
+
+  
+
+  <nav class="navbar">
+    <div style="font-size: 2rem;" class="logo">E-Commerce</div>
+    <div class="navbar-links">
+      <a href="#home">Home</a>
+      <a href="#product">Product</a>
+      <a href="#cart">Cart</a>
+      <a href="#contactus">Contact Us</a>
+      <a href="#signup" class="bg-pink-600 text-white px-6 py-3 rounded-2xl 
+      hover:bg-gradient-to-r hover:from-pink-500 hover:to-red-500 
+      transition duration-300 ease-in-out">
+      SignUp
+   </a>
+   <!-- <button id="logout-btn" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">
+    Logout
+</button> -->
+   
+      
+    </div>
+  </nav>
+<!-- Home Content Section -->
+<div id="home" class="content active">
+    <div class="container mx-auto p-14 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6" id="content">
+      <div class="text-center md:text-left w-full md:w-1/2 animate__animated animate__fadeInLeft">
+        <h1 class="text-4xl font-bold text-gray-800">
+          <span class="text-pink-500">Welcome</span> to Sweet Crumbs Bakery!
+        </h1>
+        <p class="text-gray-600 text-lg mt-4">
+          Indulge in our freshly baked cakes, pastries, and treats made with love and the finest ingredients.
+        </p>
+        <button id="get-started" 
+        class="bg-pink-500 text-white px-6 py-3 rounded-full text-xl font-semibold 
+               hover:bg-pink-600 transition-all duration-300 mt-4"
+        onclick="window.location.href='#product';">
+        Get Started 🍰
+</button>
+
+        
+      </div>
+      <div class="flex justify-center items-center w-full md:w-1/2">
+        <!-- Lottie Animation Canvas -->
+        <canvas id="canvas" width="300" height="300"></canvas>
+      </div>
+      
+      <script type="module">
+        import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+      
+        new DotLottie({
+          autoplay: true,
+          loop: true,
+          canvas: document.getElementById("canvas"),
+          src: "Animation - 1743578944480.json" // Replace with actual JSON link
+        });
+      </script>
+      
+      
+    </div>
+  
+
+    <div class="container mx-auto p-8" id="featured-products">
+      <h2 class="text-3xl font-bold text-center mb-6 animate__animated animate__fadeInUp bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500">
+        Featured Products
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__zoomIn">
+          <div class="relative">
+            <img src="https://img.freepik.com/premium-photo/beautiful-cakes-bakery_1261031-7240.jpg" alt="Product 1" class="w-full h-48 object-cover rounded-md mb-4">
+            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 rounded">20% OFF</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Sweet Whisk Bakery 🍰</h3>
+          <p class="text-gray-600 text-sm mt-2">Comfortable and elegant design for your home.</p>
+          <p class="text-orange-500 font-bold mt-2">$150.00 <span class="line-through text-gray-400">$180.00</span></p>
+          <div class="flex items-center mt-2">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star-half-alt text-yellow-400"></i>
+          </div>
+        </div>
+  
+      
+        <div class="product-card bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__zoomIn animate__delay-1s">
+          <div class="relative">
+            <img src="https://img.freepik.com/premium-photo/cake-shelf-with-cake-many-variety-store-bakery-shop_73523-5272.jpg" alt="Product 2" class="w-full h-48 object-cover rounded-md mb-4">
+            <span class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 rounded">15% OFF</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Crumb & Cream 🍪</h3>
+          <p class="text-gray-600 text-sm mt-2">Brighten your room with modern aesthetics.</p>
+          <p class="text-orange-500 font-bold mt-2">$85.00 <span class="line-through text-gray-400">$100.00</span></p>
+          <div class="flex items-center mt-2">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-gray-300"></i>
+          </div>
+        </div>
+  
+     
+        <div class="product-card bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 hover:shadow-xl animate__animated animate__zoomIn animate__delay-2s">
+          <div class="relative">
+            <img src="https://img.freepik.com/free-photo/ai-generated-cake-picture_23-2150649466.jpg" alt="Product 3" class="w-full h-48 object-cover rounded-md mb-4">
+            <span class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 rounded">New Arrival</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">The Frosted Crust 🎂</h3>
+          <p class="text-gray-600 text-sm mt-2">Experience superior sound quality anywhere.</p>
+          <p class="text-orange-500 font-bold mt-2">$120.00</p>
+          <div class="flex items-center mt-2">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star-half-alt text-yellow-400"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <div id="product" class="content">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8 animate-fade-slide">Your Favorite Treats, Just a Click Away!</h1>
+<p class="text-center text-gray-500 text-md animate-fade-slide-delay m-5">From rich chocolate cakes to refreshing sorbets, we have something for everyone.</p>
+        <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        
+        </div>
+      </div>
+      
+      <script>
+
+        const apiEndpoint = 'http://localhost:3000/product';
+      
+      
+        async function fetchProducts() {
+          try {
+            const response = await fetch(apiEndpoint);
+            const products = await response.json();
+            displayProducts(products);
+          } catch (error) {
+            console.error('Error fetching products:', error);
+          }
+        }
+      
+        function displayProducts(products) {
+          const container = $('#product-container');
+          container.empty();
+      
+          products.forEach(product => {
+            const currentDate = new Date().toLocaleDateString();
+            const currentTime = new Date().toLocaleTimeString();
+      
+            const productCard = $(`
+              <div class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+                <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">${product.name}</h3>
+                <p class="text-gray-600 mb-2">${product.description}</p>
+                <p class="text-lg font-bold text-gray-800">$${product.price}</p>
+                <p class="text-sm text-gray-500">Date: ${currentDate}</p>
+                <p class="text-sm text-gray-500 mb-4">Time: ${currentTime}</p>
+                <button class="buy-btn w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md transition-all duration-300">
+                  Buy Now
+                </button>
+              </div>
+            `);
+      
+ 
+            productCard.find('.buy-btn').hover(function() {
+              $(this).addClass('transform scale-110 bg-red-500');
+            }, function() {
+              $(this).removeClass('transform scale-110 bg-red-500');
+            });
+      
+            container.append(productCard);
+          });
+        }
+      
+        $(document).ready(fetchProducts);
+      </script>
+  </div>
+  <div id="cart" class="content">
+    <div id="product-section" class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-8">🍰 Our Delicious Products</h1>
+      <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+      </div>
+  </div>
+  
+  <div id="cart" class="bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto mt-6">
+      <h2 class="text-2xl font-bold text-center mb-4 text-gray-800">🛍️ Your Cart</h2>
+      <div id="cart-items" class="space-y-4"></div>
+      <div class="flex justify-between items-center mt-4 border-t pt-4">
+          <span class="text-xl font-semibold text-gray-700">Total:</span>
+          <span id="total-price" class="text-xl font-bold text-green-600">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="mt-4 bg-indigo-500 text-white w-full py-2 px-4 rounded hover:bg-indigo-600 transition-transform transform hover:scale-105">
+          Proceed to Checkout
+      </button>
+  </div>
+<script>
+
+// Fetch and Display Products
+async function fetchProducts() {
+    try {
+        const response = await fetch('http://localhost:3000/product');
+        const products = await response.json();
+        displayProducts(products);
+    } catch (error) {
+        console.error('Error fetching products:', error);
+    }
+}
+
+function displayProducts(products) {
+    const container = $('#product-container');
+    container.empty();
+
+    products.forEach(product => {
+        const productCard = $(`
+            <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105 product-card" data-id="${product.id}">
+                <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">${product.name}</h3>
+                <p class="text-gray-500 mb-2">${product.description}</p>
+                <p class="text-gray-600 font-bold mb-2">Price: $${product.price}</p>
+                <button class="add-to-cart bg-green-500 text-white px-3 py-1 rounded" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+                    Add to Cart
+                </button>
+            </div>
+        `);
+        container.append(productCard);
+    });
+}
+
+
+let cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+
+$(document).on('click', '.add-to-cart', function () {
+    const id = $(this).data('id');
+    const name = $(this).data('name');
+    const price = parseFloat($(this).data('price'));
+    const image = $(this).data('image');
+
+    const existingItem = cartData.find(item => item.id === id);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cartData.push({ id, name, price, quantity: 1, image });
+    }
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+    renderCart();
+    
+   
+    alert(`${name} has been added to your cart successfully! ✅`);
+});
+
+function renderCart() {
+    const container = $('#cart-items');
+    container.empty();
+    let total = 0;
+
+    cartData.forEach(item => {
+        total += item.price * item.quantity;
+        const cartItem = $(`
+            <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-md shadow-sm">
+                <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded-md">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
+                    <p class="text-gray-600">Price: $${item.price} | Quantity: ${item.quantity}</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button class="decrease-qty bg-red-500 text-white px-2 py-1 rounded" data-id="${item.id}">-</button>
+                    <span class="text-gray-700">${item.quantity}</span>
+                    <button class="increase-qty bg-green-500 text-white px-2 py-1 rounded" data-id="${item.id}">+</button>
+                    <!-- Remove Button Disabled -->
+                    <button class="remove-item bg-gray-300 text-red-500 px-2 py-1 rounded" data-id="${item.id}" disabled>
+                        Remove 
+                    </button>
+                </div>
+            </div>
+        `);
+        container.append(cartItem);
+    });
+
+    $('#total-price').text(`$${total.toFixed(2)}`);
+}
+
+
+$(document).on('click', '.increase-qty', function () {
+    const id = $(this).data('id');
+    const item = cartData.find(c => c.id === id);
+    if (item) {
+        item.quantity++;
+        localStorage.setItem('cartData', JSON.stringify(cartData));
+        renderCart();
+    }
+});
+
+$(document).on('click', '.decrease-qty', function () {
+    const id = $(this).data('id');
+    const item = cartData.find(c => c.id === id);
+    if (item && item.quantity > 1) {
+        item.quantity--;
+        localStorage.setItem('cartData', JSON.stringify(cartData)); 
+        renderCart();
+    }
+});
+
+
+$('#checkout-btn').on('click', function () {
+    $.ajax({
+        url: '/checkout',
+        type: 'POST',
+        data: JSON.stringify(cartData),
+        contentType: 'application/json',
+        success: function () {
+            alert('Checkout successful!');
+            cartData = [];
+            localStorage.removeItem('cartData'); 
+            renderCart();
+        },
+        error: function () {
+            alert('Checkout failed. Please try again.');
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    fetchProducts();
+    renderCart();
+});
+
+</script>  
+  
+</div>
+<div id="contactus" class="content">
+  <div id="contactus" class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="contact-container bg-white p-8 rounded-lg shadow-lg w-full max-w-sm text-center">
+        <h2 class="text-3xl font-bold gradient-text mb-6">Contact Us</h2>
+  
+        <input type="text" id="name" placeholder="Your Name" 
+               class="w-full px-4 py-2 mb-4 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-transform transform hover:scale-105" 
+               required>
+  
+        <input type="email" id="email" placeholder="Your Email" 
+               class="w-full px-4 py-2 mb-4 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-transform transform hover:scale-105" 
+               required>
+  
+        <input type="tel" id="phone" placeholder="Your Phone Number" 
+               class="w-full px-4 py-2 mb-4 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-transform transform hover:scale-105" 
+               required>
+  
+        <textarea id="message" placeholder="Your Message" 
+                  class="w-full px-4 py-2 mb-4 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-transform transform hover:scale-105" 
+                  rows="4" required></textarea>
+  
+        <button id="submit-btn" 
+                class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105">
+            Send Message
+        </button>
+  
+        <p id="response-message" class="mt-4 text-red-500"></p>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  <script>
+    // Example to show Contact Us form only on Contact page
+  document.addEventListener('DOMContentLoaded', function () {
+      const currentPath = window.location.pathname;
+      if (currentPath === '#contactus') {  // Ensure your Contact Us page URL is '/contact'
+          document.getElementById('contactus').classList.remove('hidden');
+      }
+  });
+  
+  
+      function validateEmail(email) {
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(email);
+      }
+  
+      function validatePhone(phone) {
+          const re = /^[0-9]{10}$/; 
+          return re.test(phone);
+      }
+  
+      function markError(input, message) {
+          input.addClass('error');
+          $('#response-message').addClass('text-red-500').text(message);
+      }
+  
+      function clearError(input) {
+          input.removeClass('error');
+          $('#response-message').removeClass('text-red-500').text('');
+      }
+  
+      $('#submit-btn').on('click', function() {
+          const name = $('#name').val().trim();
+          const email = $('#email').val().trim();
+          const phone = $('#phone').val().trim();
+          const message = $('#message').val().trim();
+  
+          let isValid = true;
+  
+     
+          $('.error').removeClass('error');
+          $('#response-message').text('');
+  
+          if (!name) {
+              markError($('#name'), 'Name is required. ❗');
+              isValid = false;
+          }
+  
+          if (!email || !validateEmail(email)) {
+              markError($('#email'), 'Invalid email format. ❗');
+              isValid = false;
+          }
+  
+          if (!phone || !validatePhone(phone)) {
+              markError($('#phone'), 'Phone number must be 10 digits. ❗');
+              isValid = false;
+          }
+  
+          if (!message) {
+              markError($('#message'), 'Message cannot be empty. ❗');
+              isValid = false;
+          }
+  
+          if (isValid) {
+              $.ajax({
+                  url: 'https://jsonplaceholder.typicode.com/posts',
+                  method: 'POST',
+                  data: JSON.stringify({ name, email, phone, message }),
+                  contentType: 'application/json',
+                  success: function() {
+                      $('#response-message').removeClass('text-red-500').addClass('text-green-500').text('Message sent successfully! ✅');
+                      $('#name, #email, #phone, #message').val('');
+                  },
+                  error: function() {
+                      $('#response-message').addClass('text-red-500').text('Failed to send message. Please try again. 🚫');
+                  }
+              });
+          }
+      });
+  </script>
+  
+        
+    </div>
+</div>
+<!--signup-->
+<div id="signup" class="content">
+  <div class="form-container">
+    <div class="form-box bg-white p-8 rounded-xl shadow-lg">
+      <!-- Signup Form -->
+      <div id="signup-form" class="form-content">
+        <h2 class="text-3xl font-bold text-center gradient-text mb-4">Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Username" class="w-full px-4 py-2 mb-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        <input type="email" id="signup-email" placeholder="Email" class="w-full px-4 py-2 mb-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        <input type="password" id="signup-password" placeholder="Password" class="w-full px-4 py-2 mb-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        <button id="signup-btn" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105">Sign Up</button>
+        <p class="text-center text-gray-500 mt-3 cursor-pointer" id="to-signin">Already have an account? Sign In</p>
+        <p class="text-red-500 text-center mt-2" id="signup-message"></p>
+      </div>
+
+      <!-- Sign In Form -->
+      <div id="signin-form" class="form-content hidden">
+        <h2 class="text-3xl font-bold text-center gradient-text mb-4">Sign In</h2>
+        <input type="email" id="signin-email" placeholder="Email" class="w-full px-4 py-2 mb-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+        <input type="password" id="signin-password" placeholder="Password" class="w-full px-4 py-2 mb-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+        <button id="signin-btn" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-md transition-transform transform hover:scale-105">Sign In</button>
+        <p class="text-center text-gray-500 mt-3 cursor-pointer" id="to-signup">Don't have an account? Sign Up</p>
+        <p class="text-red-500 text-center mt-2" id="signin-message"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content (Hidden initially) -->
+<div id="main-content" class="hidden">
+  <h1 class="text-4xl font-bold text-center mt-8">Welcome to the Dashboard!</h1>
+  <p class="text-center text-gray-600 mt-4">Explore all the features now!</p>
+  <button id="logout-btn" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300 hidden">Logout</button>
+</div>
+
+    <script>
+      // Sign Up/Sign In Logic
+
+      $('#to-signin').on('click', function() {
+        $('.form-box').addClass('active');
+        $('#signup-form').addClass('hidden');
+        $('#signin-form').removeClass('hidden');
+        $('#signup-message').text('');
+      });
+    
+      $('#to-signup').on('click', function() {
+        $('.form-box').removeClass('active');
+        $('#signin-form').addClass('hidden');
+        $('#signup-form').removeClass('hidden');
+        $('#signin-message').text('');
+      });
+    
+      // Signup AJAX
+      $('#signup-btn').on('click', function() {
+        const username = $('#signup-username').val();
+        const email = $('#signup-email').val();
+        const password = $('#signup-password').val();
+    
+        if (username && email && password) {
+          $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            method: 'POST',
+            data: JSON.stringify({ username, email, password }),
+            contentType: 'application/json',
+            success: function() {
+              $('#signup-message').addClass('text-green-500').text('Signup successful! Please Sign In.');
+              setTimeout(() => $('#to-signin').click(), 2000);
+            },
+            error: function() {
+              $('#signup-message').addClass('text-red-500').text('Signup failed. Please try again.');
+            }
+          });
+        } else {
+          $('#signup-message').addClass('text-red-500').text('All fields are required.');
+        }
+      });
+    
+      // Sign In AJAX
+      $('#signin-btn').on('click', function() {
+        const email = $('#signin-email').val();
+        const password = $('#signin-password').val();
+    
+        if (email && password) {
+          $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts/1',
+            method: 'GET',
+            success: function() {
+              $('#signin-message').addClass('text-green-500').text('Welcome back!');
+            },
+            error: function() {
+              $('#signin-message').addClass('text-red-500').text('Sign In failed. Please try again.');
+            }
+          });
+        } else {
+          $('#signin-message').addClass('text-red-500').text('All fields are required.');
+        }
+      });
+    </script>
+</div>
+<div id="signin" class="content">📞 Get in touch with us!</div>
+
+<footer class="bg-gray-800 text-white py-3">
+  <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-2">ShopEase</h2>
+      <p class="text-gray-400 text-sm">Your one-stop shop for amazing deals!</p>
+      <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="icon hover:text-blue-400 transition duration-300" id="facebook"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="icon hover:text-blue-400 transition duration-300" id="twitter"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" class="icon hover:text-pink-400 transition duration-300" id="instagram"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#" class="icon hover:text-red-400 transition duration-300" id="youtube"><i class="fab fa-youtube fa-2x"></i></a>
+      </div>
+      <p class="mt-4 text-sm text-gray-500">&copy; 2025 ShopEase. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  $(document).ready(function () {
+    $('.icon').on('mouseenter', function () {
+        $(this).find('i').css({
+            'transform': 'scale(1.5)',   
+            'transition': 'transform 0.3s ease-in-out'
+        });
+    });
+
+    $('.icon').on('mouseleave', function () {
+        $(this).find('i').css({
+            'transform': 'scale(1)', 
+            'transition': 'transform 0.3s ease-in-out'
+        });
+    });
+});
+
+</script> 
+  <div id="signin" class="content">📞 Get in touch with us!</div>
+  
+  
+
+  <script>
+
+    $(document).ready(function () {
+      setTimeout(() => {
+        $('#loading-screen').fadeOut(1000);
+      }, 2000);
+    });
+
+    
+    function showContent() {
+      const hash = location.hash.substring(1) || 'home';
+      $('.content').removeClass('active');
+      $(`#${hash}`).addClass('active');
+    }
+
+    $(window).on('hashchange', showContent);
+    $(document).ready(showContent);
+
+ 
+    $('#get-started').on('click', function () {
+      $('#content').addClass('animate__animated animate__fadeOut');
+      setTimeout(() => {
+        $('#content').removeClass('animate__fadeOut').addClass('animate__fadeIn');
+        $('#content').show();
+      }, 1000);
+    });
+
+    $('#get-started').on('click', function () {
+      $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/posts/1', // Simulated API
+        method: 'GET',
+        success: function (data) {
+          alert(`Welcome, ${data.title}!`);
+        },
+        error: function () {
+          alert('Failed to load data.');
+        }
+      });
+    });
+  </script>
+<script src="script.js"></script>
+</body>
+</html>

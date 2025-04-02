@@ -1,0 +1,112 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "name": "Chocolate Cake",
+            "price": 15.99,
+            "image": "https://img.freepik.com/free-photo/delicious-cake-with-strawberries_23-2148972059.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-01",
+            "time": "10:00 AM",
+            "description": "Rich, moist chocolate layered with creamy frosting."
+        },
+        {
+            "id": 2,
+            "name": "Strawberry Cheesecake",
+            "price": 12.49,
+            "image": "https://img.freepik.com/free-photo/view-delicious-sweet-cupcake-desserts-with-frosting_23-2150679642.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-02",
+            "time": "11:30 AM",
+            "description": "Creamy cheesecake topped with fresh strawberries."
+        },
+        {
+            "id": 3,
+            "name": "Vanilla Cupcake",
+            "price": 8.99,
+            "image": "https://img.freepik.com/free-photo/ai-generated-cake-picture_23-2150649466.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-03",
+            "time": "01:15 PM",
+            "description": "Soft vanilla cupcake with sweet buttercream."
+        },
+        {
+            "id": 4,
+            "name": "Red Velvet Cake",
+            "price": 18.99,
+            "image": "https://img.freepik.com/premium-photo/tempting-treats-delicious-cake-display-bakery-shop_985688-4873.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-04",
+            "time": "02:45 PM",
+            "description": "Velvety smooth cake with rich cream cheese frosting."
+        },
+        {
+            "id": 5,
+            "name": "Lemon Tart",
+            "price": 9.49,
+            "image": "https://img.freepik.com/free-photo/close-up-tray-ful-delicious-jelly-desserts-raspberry-chocolate-flavors-whipped-cream-berries-chocolate-cacao-tiramisu-recipe-cooking-cusine-kitchen-party-candy-buffet_7502-5859.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-05",
+            "time": "09:30 AM",
+            "description": "Tangy lemon filling in a buttery tart shell."
+        },
+        {
+            "id": 6,
+            "name": "Carrot Cake",
+            "price": 14.99,
+            "image": "https://img.freepik.com/premium-photo/man-holding-cake-that-says-happy-birthday_1213772-5040.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-06",
+            "time": "12:00 PM",
+            "description": "Spiced carrot cake with creamy frosting."
+        },
+        {
+            "id": 7,
+            "name": "Banana Bread",
+            "price": 7.99,
+            "image": "https://img.freepik.com/free-photo/closeup-shot-gourmet-cupcakes-country-club-new-jersey_181624-60723.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-07",
+            "time": "03:00 PM",
+            "description": "Moist banana bread with a hint of cinnamon."
+        },
+        {
+            "id": 8,
+            "name": "Apple Pie",
+            "price": 11.99,
+            "image": "https://img.freepik.com/free-photo/restaurant-finger-tasty-meal-food_1157-4106.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-08",
+            "time": "04:20 PM",
+            "description": "Classic apple pie with a flaky golden crust."
+        },
+        {
+            "id": 9,
+            "name": "Pumpkin Muffin",
+            "price": 6.99,
+            "image": "https://img.freepik.com/premium-photo/pastry-shop-glass-display-with-selection-cakes_109285-5228.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-09",
+            "time": "08:45 AM",
+            "description": "Spiced pumpkin muffin perfect for fall mornings."
+        },
+        {
+            "id": 10,
+            "name": "Mango Sorbet",
+            "price": 13.49,
+            "image": "https://img.freepik.com/premium-photo/beautiful-cakes-bakery_1261031-7240.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-10",
+            "time": "05:30 PM",
+            "description": "Refreshing mango sorbet with a tropical flavor."
+        },
+        {
+            "id": 11,
+            "name": "Blueberry Muffin",
+            "price": 9.99,
+            "image": "https://img.freepik.com/premium-photo/pastry-shop-glass-display-with-selection-cakes_109285-5239.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-11",
+            "time": "07:00 AM",
+            "description": "Sweet muffin bursting with fresh blueberries."
+        },
+        {
+            "id": 12,
+            "name": "Chocolate Chip Cookies",
+            "price": 5.99,
+            "image": "https://img.freepik.com/free-photo/assortment-pieces-cake_114579-79825.jpg?ga=GA1.1.1809136538.1743528109&semt=ais_hybrid",
+            "date": "2023-04-12",
+            "time": "10:15 AM",
+            "description": "Crispy cookies with gooey chocolate chips."
+        }
+    ]
+}

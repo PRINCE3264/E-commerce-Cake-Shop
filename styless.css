@@ -1,0 +1,170 @@
+@keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-slide {
+    animation: fadeSlideIn 1s ease-out;
+  }
+
+  .animate-fade-slide-delay {
+    animation: fadeSlideIn 1s ease-out 0.5s forwards;
+  }
+   body {
+      background-color: #f9fafb;
+      font-family: 'Arial', sans-serif;
+              margin: 0;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+       
+    }
+    .error {
+            border-color: #f87171 !important;
+        }
+    .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .buy-btn {
+      transition: all 0.3s ease;
+    }
+    .buy-btn:hover {
+      background-color: #ef4444;
+      transform: scale(1.1);
+    }
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .contact-form:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      align-items: center;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+     .form-container {
+      perspective: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-box {
+      width: 320px;
+      transition: transform 0.8s ease, box-shadow 0.8s ease;
+      transform-style: preserve-3d;
+    }
+    .form-box.active {
+      transform: rotateY(180deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+   
+    
+    .contact-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        position: relative; 
+    }
+    
+    .navbar {
+      display: flex;
+      background-color: gray;
+      padding: 10px 20px;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+     
+      position: sticky; 
+  top: 0;          
+  z-index: 1000;    
+  background-color: gray; 
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .navbar a:hover {
+      background-color: #ff6f61;
+      border-radius: 25px;
+    }
+    .content {
+      padding: 20px;
+      display: none;
+    
+    }
+    .active {
+      display: block;
+    }
+  /*  .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-size: 2em;
+    }*/
+    
+    #contactus {
+        
+   
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .icon i {
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;  /* Add cursor pointer effect */
+    }
+    
+
+
+    .hidden {
+        display: none;
+    }
+    
+    #main-content {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+    }
+    
+    #main-content:not(.hidden) {
+        opacity: 1;
+    }
+    
